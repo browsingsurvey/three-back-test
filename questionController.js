@@ -1,6 +1,6 @@
 twoBackApp.controller('questionController', ['$scope', '$interval', '$resource', function($scope, $interval, $resource) {
 
-	var letter_array = $scope.main.generateLetters(42, 2);
+	var letter_array = $scope.main.generateLetters(22, 2);
 	$scope.started_trial = false;
 	$scope.trial_num = -2;
 	$scope.current_letter = letter_array[$scope.trial_num + 1];
@@ -39,7 +39,7 @@ twoBackApp.controller('questionController', ['$scope', '$interval', '$resource',
 			$scope.started_trial = true;
 		}
 
-		if($scope.trial_num === 40){
+		if($scope.trial_num === 20){
 			$scope.main.two_back = false;
 
 			$scope.main.two_back_results = {
@@ -78,7 +78,7 @@ twoBackApp.controller('questionController', ['$scope', '$interval', '$resource',
 
 twoBackApp.controller('threebackController', ['$scope', '$interval','$resource', function($scope, $interval, $resource) {
 
-	var letter_array = $scope.main.generateLetters(43, 3);
+	var letter_array = $scope.main.generateLetters(23, 3);
 	$scope.started_trial = false;
 	$scope.trial_num = -3;
 	$scope.current_letter = letter_array[$scope.trial_num + 2];
@@ -118,7 +118,7 @@ twoBackApp.controller('threebackController', ['$scope', '$interval','$resource',
 			$scope.started_trial = true;
 		}
 
-		if($scope.trial_num === 40){
+		if($scope.trial_num === 20){
 			$scope.main.finished = true;
 			$scope.main.three_back_results = {
 				num_correct: $scope.num_correct,
