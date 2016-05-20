@@ -39,7 +39,7 @@ twoBackApp.controller('questionController', ['$scope', '$interval', '$resource',
 			$scope.started_trial = true;
 		}
 
-		if($scope.trial_num === 3){
+		if($scope.trial_num === 40){
 			$scope.main.two_back = false;
 
 			$scope.main.two_back_results = {
@@ -118,7 +118,7 @@ twoBackApp.controller('threebackController', ['$scope', '$interval','$resource',
 			$scope.started_trial = true;
 		}
 
-		if($scope.trial_num === 3){
+		if($scope.trial_num === 40){
 			$scope.main.finished = true;
 			$scope.main.three_back_results = {
 				num_correct: $scope.num_correct,
